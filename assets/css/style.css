@@ -12,7 +12,7 @@ body { background-color: #fff; padding: 0px; font: 16.0px/1.5 Crimson Pro, serif
 
 /*
 .social-icons a:after { content: ''; display: block; margin: 0px; height: 1px; width: 0px; background: transparent; transition: width .5s ease, background-color .5s ease; } .social-icons a:hover:after { width: 100%; background: #337ab7; } */
-@media (prefers-color-scheme: dark) { .social-icons a:last-child { margin-right: 0; }
+@media { .social-icons a:last-child { margin-right: 0; }
   .social-icons a:hover { background-color: #20212b; color: black; transform: scale(1.2); }
   /* .social-icons a:after { content: ''; display: block; margin: 0px; height: 1px; width: 0px; background: transparent; transition: width .5s ease, background-color .5s ease; } .social-icons a:hover:after { width: 100%; background: #a0b0ff; } */ }
 .icon-button { background-color: white; border-radius: 3.6rem; cursor: pointer; display: inline-block; font-size: 2.0rem; height: 3.6rem; line-height: 3.6rem; margin: 0 5px; position: relative; text-align: center; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; width: 3.6rem; }
@@ -37,7 +37,7 @@ education { font-weight: 500; font-size: 115%; }
 
 papertitle { font-weight: 600; font-size: 100%; }
 
-@media (prefers-color-scheme: dark) { body { background-color: #232915; color: #dadbdf; }
+@media  { body { background-color: #232915; color: #dadbdf; }
   autocolor { color: #dadbdf; }
   lightonly { visibility: hidden; }
   darkonly { visibility: visible; }
@@ -144,7 +144,7 @@ header ul a:active { background-color: #f0f0f0; }
 
 strong { color: #222; font-weight: 500; }
 
-@media (prefers-color-scheme: dark) { strong { color: #eeeff0; } }
+@media { strong { color: #eeeff0; } }
 header ul li + li + li { border-right: none; width: 89px; }
 
 header ul a strong { font-size: 14px; display: block; color: #222; }
