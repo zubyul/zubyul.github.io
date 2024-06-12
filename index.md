@@ -2,17 +2,18 @@
 layout: homepage
 ---
 
-## About Me
-
-I am six hedgehogs in a highly advanced bot
 
 ## Research Interests
 
-- **Interest one:** big
-- **interest two:** still big
+- **Current work:** distributed statistical inference in social interaction networks - how people converge onto an underlying 'true' distribution from limited individual knowledge.
+- **Other interests:** 
 
 ## News
 
-- **[July 2024]** Come to my talk at CogSci!
+ ***[July 2024]*** Come to my talk at CogSci!
+
+
+
+
 
 {% include_relative _includes/publications.md %}
