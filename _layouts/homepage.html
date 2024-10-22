@@ -22,47 +22,21 @@
   <link rel="stylesheet" href="./assets/css/publications.css">
   
   <style>
-    .info-box-overlay {
-      display: none;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
+    .photo-container {
+      position: relative;
+      display: inline-block;
     }
 
-    .info-box {
-      display: none;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background:  #B6CEB9;
-      color: black;
-      width: 300px;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      z-index: 1000;
+    .emoji-link {
+      position: absolute;
+      top: -20px; /* Moves the emoji outside the image box */
+      right: -20px;
+      font-size: 2rem;
+      text-decoration: none;
     }
 
-    .info-box p {
-      margin-bottom: 10px;
-    }
-
-    .info-box button {
-      display: block;
-      width: 80%;
-      margin: 10px auto;
-      padding: 10px;
-      border: none;
-      background: white;
-      color: green;
-      cursor: pointer;
-      font-size: 1rem;
+    .emoji-link:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -70,7 +44,11 @@
   <div class="wrapper">
     <header>
       {% if site.avatar %}
-      <a class="image"><img src="{{ site.avatar }}" alt="avatar" /></a>
+      <div class="photo-container">
+        <a class="image"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <!-- Positioning the emoji outside the image box -->
+        <a href="{{ site.baseurl }}/page2_artistic.html" class="emoji-link">☀️</a>
+      </div>
       {% endif %}
 
       <h1>{{ site.title }}</h1>
@@ -131,20 +109,6 @@
     </footer>
   </div>
 
-  <!-- Info Box and Overlay commented out for now -->
-  <!--
-  <div class="info-box-overlay" id="info-box-overlay"></div>
-
-  <div class="info-box" id="info-box">
-      <p id="question">Let's correlate the observer and observed</p>
-      <button id="professional-button" onmouseover="changeQuestion('Who am I being observed by?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2.html'">Professional / Academic</button>
-      <button id="artistic-button" onmouseover="changeQuestion('What lens am I being perceived in?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_artistic.html'"> ∑creative </button>
-      <button id="friend-button" onmouseover="changeQuestion('Who are you looking for?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_friend.html'">Atemporal friend</button>
-      <button id="enemy-button" onmouseover="changeQuestion('Who\'s askin\'?')" onmouseout="resetQuestion()" onclick="closeWindow()">Prospective enemy</button>
-      <button id="close-button" onclick="closeInfoBox()">Close</button>
-  </div>
-  -->
-
   <div class="sidebar">
     <div id="right-tabs" class="tabs">
       <div class="currentTab">
@@ -155,23 +119,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function closeWindow() {
-        console.log('Attempting to close window');
-        window.close();
-    }
-
-    function changeQuestion(newQuestion) {
-        var questionElement = document.getElementById('question');
-        questionElement.textContent = newQuestion;
-    }
-
-    function resetQuestion() {
-        var questionElement = document.getElementById('question');
-        questionElement.textContent = '👁️👃👁️';
-    }
-  </script>
 </body>
 </html>
 
