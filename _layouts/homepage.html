@@ -124,89 +124,54 @@
 
     </header>
     <section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info Box Example</title>
-    <style>
-        .info-box-overlay {
-            display: none;
-            /* Add your styles for overlay */
-        }
+      {{ content }}
+      <br>
+    </section>
+    <footer>
+    </footer>
+  </div>
 
-        .info-box {
-            display: none;
-            /* Add your styles for info box */
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <section>
-            {{ content }}
-            <br>
-        </section>
-        <footer>
-        </footer>
+  <!-- Info Box and Overlay commented out for now -->
+  <!--
+  <div class="info-box-overlay" id="info-box-overlay"></div>
+
+  <div class="info-box" id="info-box">
+      <p id="question">Let's correlate the observer and observed</p>
+      <button id="professional-button" onmouseover="changeQuestion('Who am I being observed by?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2.html'">Professional / Academic</button>
+      <button id="artistic-button" onmouseover="changeQuestion('What lens am I being perceived in?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_artistic.html'"> ∑creative </button>
+      <button id="friend-button" onmouseover="changeQuestion('Who are you looking for?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_friend.html'">Atemporal friend</button>
+      <button id="enemy-button" onmouseover="changeQuestion('Who\'s askin\'?')" onmouseout="resetQuestion()" onclick="closeWindow()">Prospective enemy</button>
+      <button id="close-button" onclick="closeInfoBox()">Close</button>
+  </div>
+  -->
+
+  <div class="sidebar">
+    <div id="right-tabs" class="tabs">
+      <div class="currentTab">
+        <span>Intro</span>
+      </div>
+      <div class="tab">
+        <a href="{{ site.baseurl }}/page2.html">About</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Info Box and Overlay -->
-    <div class="info-box-overlay" id="info-box-overlay"></div>
+  <script>
+    function closeWindow() {
+        console.log('Attempting to close window');
+        window.close();
+    }
 
-    <div class="info-box" id="info-box">
-        <p id="question">Let's correlate the observer and observed</p>
-        <button id="professional-button" onmouseover="changeQuestion('Who am I being observed by?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2.html'">Professional / Academic</button>
-        <button id="artistic-button" onmouseover="changeQuestion('What lens am I being perceived in?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_artistic.html'"> ∑creative </button>
-        <button id="friend-button" onmouseover="changeQuestion('Who are you looking for?')" onmouseout="resetQuestion()" onclick="window.location.href='{{ site.baseurl }}/page2_friend.html'">Atemporal friend</button>
-        <button id="enemy-button" onmouseover="changeQuestion('Who\'s askin\'?')" onmouseout="resetQuestion()" onclick="closeWindow()">Prospective enemy</button>
-        <button id="close-button" onclick="closeInfoBox()">Close</button>
-    </div>
+    function changeQuestion(newQuestion) {
+        var questionElement = document.getElementById('question');
+        questionElement.textContent = newQuestion;
+    }
 
-    <div class="sidebar">
-        <div id="right-tabs" class="tabs">
-            <div class="currentTab">
-                <span>Intro</span>
-            </div>
-            <div class="tab">
-                <a href="#" onclick="openInfoBox()">About</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openInfoBox() {
-            console.log('Opening Info Box');
-            var infoBox = document.getElementById('info-box');
-            var infoBoxOverlay = document.getElementById('info-box-overlay');
-            infoBox.style.display = 'block';
-            infoBoxOverlay.style.display = 'block';
-        }
-
-        function closeInfoBox() {
-            console.log('Closing Info Box');
-            var infoBox = document.getElementById('info-box');
-            var infoBoxOverlay = document.getElementById('info-box-overlay');
-            infoBox.style.display = 'none';
-            infoBoxOverlay.style.display = 'none';
-        }
-
-        function closeWindow() {
-            console.log('Attempting to close window');
-            window.close();
-        }
-
-        function changeQuestion(newQuestion) {
-            var questionElement = document.getElementById('question');
-            questionElement.textContent = newQuestion;
-        }
-
-        function resetQuestion() {
-            var questionElement = document.getElementById('question');
-            questionElement.textContent = '👁️👃👁️';
-        }
-    </script>
+    function resetQuestion() {
+        var questionElement = document.getElementById('question');
+        questionElement.textContent = '👁️👃👁️';
+    }
+  </script>
 </body>
 </html>
 
