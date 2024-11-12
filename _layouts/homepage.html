@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en-US">
 <head>
-  <title>{{ site.title }} | {{site.affiliation}}</title>
+  <title>Yulya Zubak / Юля Зубак | University of Wisconsin-Madison</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
-  {% if site.keywords %}
-  <meta name="keywords" content="{{ site.keywords }}">
-  {% endif %}
-  {% if site.canonical %}
-  <link rel="canonical" href="{{ site.canonical }}"/>
-  {% endif %}
-
-  <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-  <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-  <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+  <meta name="description" content="">
+  <meta name="keywords" content="yuliya zubak social interaction cognitive science psychology computational zeitgeist yulya">
+  <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/favicon.png" type="image/png" />
+  <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -38,14 +31,80 @@
     .emoji-link:hover {
       transform: scale(1.2);
     }
+
+    /* Overlay styles */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      z-index: 1000;
+      visibility: visible; /* Visible initially */
+      opacity: 1;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    #overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #overlay-content {
+      background: #333;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #close-overlay-btn {
+      background-color: #0D1321;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #close-overlay-btn:hover {
+      background-color: #B4D572;
+    }
   </style>
+
+  <script>
+    // JavaScript to handle overlay display
+    document.addEventListener("DOMContentLoaded", function() {
+      const overlay = document.getElementById("overlay");
+      const closeButton = document.getElementById("close-overlay-btn");
+      
+      closeButton.addEventListener("click", function() {
+        overlay.classList.add("hidden");
+      });
+    });
+  </script>
 </head>
 <body>
+  <div id="overlay">
+    <div id="overlay-content">
+      <p>Computationally, world peace isn’t a hard challenge. <br>☀️<br> We are given a planet full of material goods and are challenged with maintaining our society on it, while pursuing a secondary collective goal of increasing our knowledge base infinitely. <br> A simple information-sharing DeGroot style society, having explored this planet, would share information until they converged onto a single shared framework of belief, upheld by a collective shared knowledge base. <br>☀️<br>This was the dream of the old (2000s) internet. For a moment, we believed that all problems were just a lack of information.</p>
+      <button id="close-overlay-btn">What happened?</button>
+    </div>
+  </div>
+
   <div class="wrapper">
     <header>
-      {% if site.avatar %}
       <div class="photo-container">
-        <a class="image"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <a class="image"><img src="./assets/img/photo.jpeg" alt="avatar" /></a>
         <!-- Positioning the emoji outside the image box -->
         <a href="{{ site.baseurl }}/page2_artistic.html" class="emoji-link">☀️</a>
       </div>
