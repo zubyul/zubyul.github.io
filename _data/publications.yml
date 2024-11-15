@@ -1,22 +1,35 @@
 main:
-
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
-
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+- title: Distributed statistical inference in social interaction networks
+  authors: Zubak, Y., Dronavalli, P., Chuang, Y., & Hawkins, R.
+  conference_short: CogSci
+  conference: Proceedings of the Annual Meeting of the Cognitive Science Society,
+    46
+  pdf: https://escholarship.org/uc/item/8km974x4
+- title: The Chlamydomonas reinhardtii CLiP2 mutant collection expands genome coverage
+    with high-confidence disrupting alleles
+  authors: Lunardon, A., Patena W., Warren-Williams M., Pacini C., Zubak Y., Laudon
+    M., Silflow C., Lefebvre P., Jonikas M.
+  conference_short: BioRxiv
+  conference: Preprint
+- title: Phenotype Driven Analysis of Whole Genome Sequencing Identifies Deep Intronic
+    Variants
+  authors: Scipio, M. D., Tavares, E., Deshmukh, S., Audo, I., Green-Sanderson, K.,
+    Zubak, Y., et al.
+  conference_short: IOVS
+  conference: Investigative Ophthalmology & Visual Science
+  pdf: https://doi.org/10.1167/iovs.61.10.36
+- title: Distributed statistical inference in social interaction networks
+  authors: Zubak, Y., Dronavalli, P., Chuang, Y., & Hawkins, R.
+  conference_short: In Preparation
+  conference: Preprint
+- title: "Examining Social Interaction from a Preschooler\u2019s Point of View"
+  authors: "Bergey C.A., Lyu A., O\u2019Keeffe M., Li B., Zubak Y., Plum B., Yang\
+    \ S., Patil A., Zhou I., Hawkins R."
+  conference_short: In Preparation
+  conference: Submitted to SRCD
+- title: An expanded Chlamydomonas mutant library enables placement of eukaryotic
+    photosynthetic genes into pathways
+  authors: Lunardon, A., Patena W., Warren-Williams M., Pacini C., Zubak Y., Laudon
+    M., Silflow C., Lefebvre P., Jonikas M.
+  conference_short: In Preparation
+  conference: Preprint
