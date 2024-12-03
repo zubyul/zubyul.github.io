@@ -1,8 +1,8 @@
 # Basic Information 
 title: Yuliya Zubak / Юля Зубак
 position: Lab Manager, Social Interaction Lab
-affiliation: University of Wisconsin-Madison
-email: yzubak (at) wisc.edu 
+affiliation: University of Wisconsin-Madison / Stanford University
+email: yzubak (at) wisc.edu / (at) stanford.edu
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -16,7 +16,7 @@ google_scholar: https://scholar.google.com/citations?user=nLaI3iIAAAAJ&hl=en&oi=
 cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/zubyul
 linkedin: https://www.linkedin.com/in/yuliya-zubak/
-twitter: https://twitter.com/
+twitter: https://x.com/zubyul
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
@@ -27,7 +27,7 @@ header: ./assets/img/frame.png
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
+enable_footnote: false
 
 # Auto Dark Mode
 # You may use the option to disable the automatic dark theme
@@ -39,7 +39,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
+#google_analytics: UA-111540567-4
 
 
 # The following files will be removed from the generated website.
