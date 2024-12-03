@@ -7,7 +7,7 @@ layout: homepage
 
 - **Current work:** distributed statistical inference in social interaction networks - how people converge onto an underlying 'true' distribution from limited individual knowledge.
 
-- **Other interests:** How do we integrate emotional information in the context of group social interactions? How do emotional bonds influence our capacity to impact global social networks? How do our affective cues signal our allegiances? 
+- **Other interests:** How do we integrate emotional information in the context of group social interactions? How do our affective cues signal our allegiances? 
 
 
 
