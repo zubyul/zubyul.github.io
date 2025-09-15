@@ -23,7 +23,34 @@
 
     <link rel="stylesheet" href="./assets/css/page2.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
-    
+
+  <style>
+    .photo-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .emoji-link {
+      position: absolute;
+      top: -20px; /* Moves the emoji outside the image box */
+      right: -20px;
+      font-size: 2rem;
+      text-decoration: none;
+      z-index: 9999;
+    }
+
+    /* Mobile adjustment */
+    @media (max-width: 900px) {
+      .emoji-link {
+        top: 45px; /* Move down 65px total from original -20px */
+      }
+    }
+
+    .emoji-link:hover {
+      transform: scale(1.2);
+      text-decoration: none;
+    }
+  </style>
 
   </head>
   <body>
@@ -31,7 +58,11 @@
       <header>
             
         {% if site.avatar %}
-        <a class="image"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <div class="photo-container">
+          <a class="image"><img src="{{ site.avatar }}" alt="avatar" /></a>
+          <!-- Positioning the emoji outside the image box -->
+          <a href="https://sunlit.one" class="emoji-link">☀️</a>
+        </div>
         {% endif %}
 
         <h1>{{ site.title }}</h1>
@@ -110,15 +141,17 @@
 
 
 
-</div>
-<div class="sidebar">
- <div id="right-tabs" class="tabs">
-  <div class="currentTab">
-    <a href="/">Intro</a>
   </div>
-  <div class="tab">
-       <a href="{{ site.baseurl }}/page2.html">About</a>
+
+  <div class="sidebar">
+    <div id="right-tabs" class="tabs">
+      <div class="currentTab">
+        <a href="/">Intro</a>
+      </div>
+      <div class="tab">
+        <a href="/page2.html">About</a>
+      </div>
+    </div>
   </div>
-</div>
-  </body>  
+  </body>
 </html>

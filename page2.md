@@ -37,9 +37,11 @@ Or just email/slack me, it'll be fun. Send me your strangest belief held sincere
 
 ## Hobbies
 - Brazilian Jiu Jitsu
-- social deduction games 
+- social deduction games
 - painting & writing (sometimes)
 - will never say no to karaoke & dance
 - any tangentially sci-fi & self-satirical media
 - epiphytic & pleasantly scented plants & ancient ecologies
 - abandoned buildings, old castles, and similar group project artifacts
+
+<br><br><br><br>

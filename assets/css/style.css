@@ -1,7 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-body { background-color: #fff; padding: 0px; font: 16.0px/1.5 Crimson Pro, serif; color: #595959; font-weight: 400; margin: 0; overflow-x: hidden; word-wrap: break-word; }
+body {
+  background-color: #fff;
+  padding: 0px;
+  font: 16.0px/1.5 Crimson Pro, serif;
+  color: #595959;
+  font-weight: 400;
+  margin: 0;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+@media (min-width: 901px) {
+  body {
+    display: flex;
+    min-height: 100vh;
+  }
+}
 
 .pub-row { display: flex; align-items: center; }
 
@@ -77,7 +93,9 @@ a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 
 a:hover small { color: #777; }
 
-.wrapper { width: 960px; margin: 0 auto; }
+.wrapper {
+  display: contents;
+}
 
 blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; font-style: italic; }
 
@@ -97,35 +115,37 @@ th { color: #444; }
 img { max-width: 100%;   border-top-left-radius: 15px; /* Rounded top-left corner */
     border-top-right-radius: 15px;}
 header {
-
 text-align: center;
 }
 
-
-@media (min-width: 1500px) {
+@media (min-width: 901px) {
   header {
-    transform: translateY(-50%) translateX(-75%);  top: 50%;
-    width: 400px;
-  position: fixed;
-  background-color:#45512A ;
-  border-radius: 15px; /* Rounded edges */
+    flex: 0 0 clamp(320px, 28vw, 400px);
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    height: fit-content;
+    background-color: #45512A;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-align: center;
+    margin: 0 20px;
   }
-  
-}
 
-@media (max-width: 1500px) {
-  header {
-    transform: translateY(-50%) translateX(-30%);  top: 50%;
-    width: 400px;
-  position: fixed;
-  background-color:#45512A ;
-  border-radius: 15px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  -webkit-font-smoothing: subpixel-antialiased;
+  header h1,
+  header position,
+  header autocolor,
+  header email,
+  header .social-icons {
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  
+
+  header h1 {
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 
 
@@ -150,31 +170,15 @@ header ul li + li + li { border-right: none; width: 89px; }
 
 header ul a strong { font-size: 14px; display: block; color: #222; }
 
-@media (min-width: 1500px) {
+@media (min-width: 901px) {
   section {
-    position: absolute;
-    left: 420px;
-    right: 64px;
-    top: 8.0em;
-    padding-bottom: 50px;
+    flex: 1;
+    padding: 8.0em 20px 50px 20px;
     box-sizing: border-box;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-  }
-}
-
-@media (max-width: 1499px) {
-  section {
-    position: absolute;
-    left: 420px;
-    right: 64px;
-    top: 8.0em;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    max-width: calc(100vw - clamp(300px, 25vw, 400px) - 104px);
   }
 }
 
@@ -183,15 +187,15 @@ small { font-size: 11px; }
 hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 
 footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-smoothing: subpixel-antialiased; text-align: center; }
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0px;
-  width: 64px; 
-  height: 100%; 
-  background-color: #B6CEB9; /* Light pink color */
-  padding-top: 20px; /* Adjust top padding to align with tabs */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@media (min-width: 901px) {
+  .sidebar {
+    flex: 0 0 64px;
+    background-color: #B6CEB9;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100vh;
+  }
 }
 .currentTab {
   position: fixed;
@@ -261,7 +265,8 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
     position: static;
     margin: 0 auto;
     text-align: center;
-    background-color: #45512A ;
+    background-color: #45512A;
+    border-radius: 15px;
   }
 
   body {
