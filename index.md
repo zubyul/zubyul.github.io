@@ -4,13 +4,21 @@ layout: homepage
 
 
 ## Research Interests
+**Current:** <br> Testing sentiment transmission in social interaction chains across various models.
 
-- **Current work:** distributed statistical inference in social interaction networks - how people converge onto an underlying 'true' distribution from limited individual knowledge.
+**Recent:** <br> How groups converge onto shared truth from limited individual knowledge, even when it's hard.
 
-- **Other interests:** How do we integrate emotional information in the context of group social interactions? How do our affective cues signal our allegiances?
+**Future:** 
+- Blood on the clocktower as an experiment! Adversarial emotional communication. What's a vibe?
+- Schemas and emotion-cuing in social memory formation. People are strange when you're a stranger.
+- Neuronal network level models of memory formation, neural oscillation/criticality, and belief updating in different emotional states. A cortical column is just doing math. 
+- AI welfare and the application of human memory efficiencies to AI. 
+- Information cascades across all network scales. 
+- Human personality manifold and how we cue identity, online and offline. I'm coded...
 
-<br><br><br><br>
 
+
+<br><br>
 
 
 

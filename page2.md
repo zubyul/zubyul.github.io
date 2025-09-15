@@ -6,13 +6,13 @@ layout: page2
 - **Undergraduate degree:** Molecular Biology & Biotechnology Specialist Co-op, Neuroscience Major
  at the University of Toronto, Scarborough Campus
 
-As a first-generation student from a single-parent immigrant background, I went into undergrad with an emphasis on practicality, like genetic engineering. In the process, I developed an interest in understanding the cognitive origins of the [collective dynamics of social groups](https://www.twitterandteargas.org/). 
+I went into undergrad with an emphasis on practicality, like genetic engineering. In the process, I developed an interest in the cognitive origins of the [collective dynamics of social groups](https://www.twitterandteargas.org/). 
 
 I rationalize this shift in two ways.
 - Firstly, it's all dynamic networks.  
-- Secondly, an itch to understand culture and ideology, easily witnessed on the internet as everything from shared language to zeitgeist impacting ideological debate, but difficult to define on the level of the brain. While I have switched to Cognitive Science to pursue this, I aim to reconnect with Neuroscience along the way!
+- Secondly, an itch to understand culture and ideology, easily witnessed on the internet as everything from shared language to culture defining ideological debate, but difficult to define on the level of the brain. While I have switched to Cognitive Science to pursue this, I aim to reconnect with Neuroscience along the way!
 
-I began my research career in [Elise Heon's clinical genetics lab](https://www.sickkids.ca/en/staff/h/elise-heon/). I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
+I began my research career in [Elise Heon's](https://www.sickkids.ca/en/staff/h/elise-heon/) clinical genetics lab. I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
 
 I briefly participated in data analysis on a [children's cochlear implant project](https://lab.research.sickkids.ca/archies-cochlear-implant/), visualizing how language shapes the brain, before joining [Julien Muffat's neuroimmunology lab](https://moleculargenetics.utoronto.ca/faculty/julien-muffat), where I learned about the complexity the brain holds, both in cell and interaction types—insight into why the brain is such a hard to model system.
 
@@ -20,7 +20,7 @@ I did my undergraduate thesis with [Yuliya Nikolova](https://www.camh.ca/en/scie
 
 After graduating, I worked in [Martin Jonikas' lab](https://jonikaslab.squarespace.com/), following one of my deeply held beliefs— finding a means for our society to stabilize our presence on this planet.  I have deep respect for this work, but propaganda and its consequences [have a heavier bearing on my life](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine). 
 
-I am currently the lab manager for [Robert Hawkin's Social Interaction Lab](https://socialinteractionlab.github.io/). I'm studying how people converge on a shared underlying belief in a social network, and you should ask me about it!
+I just finished being the lab manager for [Robert Hawkin's](https://socialinteractionlab.github.io/) Social Interaction Lab, Where I studied how people converge on a shared underlying belief in a social network. I'm now a graduate student with [Tim Pleskac](https://www.timpleskac.com) at Indiana!
 
 ## Personal Background
 
@@ -30,7 +30,7 @@ I have been interested in Solving Big Problems and Understanding Everything from
 
 I have really strong opinions on futurism and What Makes Sci-fi Good, and occasionally enjoy dipping my toes into cosmic horrors beyond knowledge and conscious grasp haunting the edges of the mundane.
 
-I love viewing the world from the eyes of others. In true Ukrainian-Canadian fashion, I try to befriend everyone, even if just a little bit :)
+I love viewing the world from the eyes of others. I try to befriend everyone, even if just a little bit :)
 
 The rest of my personality can be derived from the elements presented here, and is left as an exercise for the reader.
 Or just email/slack me, it'll be fun. Send me your strangest belief held sincerely!
