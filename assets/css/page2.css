@@ -184,7 +184,8 @@ header ul a strong { font-size: 14px; display: block; color: #222; }
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    max-width: calc(100vw - clamp(300px, 25vw, 400px) - 104px);
+    max-width: calc(100vw - clamp(300px, 25vw, 400px) - 104px - 64px);
+    margin-right: 64px;
   }
 }
 
@@ -199,8 +200,12 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
     background-color: #B6CEB9;
     padding-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 64px;
     height: 100vh;
+    z-index: 100;
   }
 }
 .currentTab {

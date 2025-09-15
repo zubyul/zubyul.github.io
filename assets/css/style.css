@@ -178,7 +178,8 @@ header ul a strong { font-size: 14px; display: block; color: #222; }
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    max-width: calc(100vw - clamp(300px, 25vw, 400px) - 104px);
+    max-width: calc(100vw - clamp(300px, 25vw, 400px) - 104px - 64px);
+    margin-right: 64px;
   }
 }
 
@@ -193,23 +194,27 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
     background-color: #B6CEB9;
     padding-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 64px;
     height: 100vh;
+    z-index: 100;
   }
 }
 .currentTab {
   position: fixed;
- top: 10px;
+  top: 10px;
   right: -100px;
   width: 100px;
-  background-color:  #0D1321;
+  background-color: #0D1321;
   color: white;
   text-align: center;
   padding: 10px;
   border-radius: 10px 10px 0 0;
-  
-  transform-origin: top left; /* Set transform origin to top left */
-  transform: rotate(90deg); /* Rotate the tab */
+  z-index: 1000;
+  transform-origin: top left;
+  transform: rotate(90deg);
 }
 .tab {
   position: fixed;
