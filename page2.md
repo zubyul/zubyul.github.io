@@ -12,7 +12,7 @@ I rationalize this shift in two ways.
 - Firstly, it's all dynamic networks.  
 - Secondly, an itch to understand culture and ideology, easily witnessed on the internet as everything from shared language to zeitgeist impacting ideological debate, but difficult to define on the level of the brain. While I have switched to Cognitive Science to pursue this, I aim to reconnect with Neuroscience along the way!
 
-I began my research career in [Elise Heon's clinical genetics lab](https://www.sickkids.ca/en/staff/h/elise-heon/). I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
+I began my research career in [Elise Heon's clinical genetics lab](https://www.sickkids.ca/en/staff/h/elise-heon/). I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
 
 I briefly participated in data analysis on a [children's cochlear implant project](https://lab.research.sickkids.ca/archies-cochlear-implant/), visualizing how language shapes the brain, before joining [Julien Muffat's neuroimmunology lab](https://moleculargenetics.utoronto.ca/faculty/julien-muffat), where I learned about the complexity the brain holds, both in cell and interaction types—insight into why the brain is such a hard to model system.
 

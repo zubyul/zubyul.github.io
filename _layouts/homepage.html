@@ -26,6 +26,14 @@
       right: -20px;
       font-size: 2rem;
       text-decoration: none;
+      z-index: 9999;
+    }
+
+    /* Mobile adjustment */
+    @media (max-width: 900px) {
+      .emoji-link {
+        top: 45px; /* Move down 65px total from original -20px */
+      }
     }
 
     .emoji-link:hover {
@@ -106,7 +114,7 @@
       <div class="photo-container">
         <a class="image"><img src="./assets/img/photo.jpeg" alt="avatar" /></a>
         <!-- Positioning the emoji outside the image box -->
-        <a href="{{ site.baseurl }}/page2_artistic.html" class="emoji-link">☀️</a>
+        <a href="https://sunlit.one" class="emoji-link">☀️</a>
       </div>
    
 

@@ -1,0 +1,20 @@
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-aphm92 sitelibdir\=./.gem.20250914-66951-aphm92 clean
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-aphm92 sitelibdir\=./.gem.20250914-66951-aphm92
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: search path '/opt/homebrew/Cellar/openssl@3/3.5.1/lib' not found
+ld: warning: search path '/opt/homebrew/Cellar/openssl@3/3.5.1/lib' not found
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-aphm92 sitelibdir\=./.gem.20250914-66951-aphm92 install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250914-66951-aphm92/racc
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-aphm92 sitelibdir\=./.gem.20250914-66951-aphm92 clean

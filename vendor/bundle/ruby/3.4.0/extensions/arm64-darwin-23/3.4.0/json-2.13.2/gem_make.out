@@ -1,0 +1,27 @@
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.13.2/ext/json/ext/parser
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+checking for rb_enc_interned_str() in ruby/encoding.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+checking for arm_neon.h... yes
+checking for cpuid.h... no
+creating Makefile
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.13.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-j0otie sitelibdir\=./.gem.20250914-66951-j0otie clean
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.13.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-j0otie sitelibdir\=./.gem.20250914-66951-j0otie
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+ld: warning: search path '/opt/homebrew/Cellar/openssl@3/3.5.1/lib' not found
+ld: warning: search path '/opt/homebrew/Cellar/openssl@3/3.5.1/lib' not found
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.13.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-j0otie sitelibdir\=./.gem.20250914-66951-j0otie install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20250914-66951-j0otie/json/ext
+
+current directory: /Users/zubyul/zubyul.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.13.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250914-66951-j0otie sitelibdir\=./.gem.20250914-66951-j0otie clean

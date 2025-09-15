@@ -1,8 +1,8 @@
 # Basic Information 
 title: Yuliya Zubak / Юля Зубак
 position: Lab Manager, Social Interaction Lab
-affiliation: University of Wisconsin-Madison / Stanford University
-email: yzubak (at) wisc.edu / (at) stanford.edu
+affiliation: Indiana University - Bloomington
+email: yzubak (at) iu.edu
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -53,3 +53,4 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
+  - vendor/
