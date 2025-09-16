@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         constructor(x, y, parentSplit = false) {
             this.x = x;
             this.y = y;
-            // Faster movement across screen
+            // Faster, more lively movement
             const angle = Math.random() * Math.PI * 2;
-            const speed = Math.random() * 0.5 + 0.2; // Faster movement: 0.2-0.7 px/frame
+            const speed = Math.random() * 0.4 + 0.15; // Faster movement: 0.15-0.55 px/frame
             this.vx = Math.cos(angle) * speed;
             this.vy = Math.sin(angle) * speed;
             this.originalVx = this.vx;
@@ -51,16 +51,19 @@ document.addEventListener('DOMContentLoaded', function() {
             this.phase = Math.random() * Math.PI * 2;
             this.amplitude = Math.random() * 0.3 + 0.1;
             this.frequency = Math.random() * 0.02 + 0.01;
-            this.life = parentSplit ? Math.random() * 0.3 + 0.4 : 1.0; // Splits start with less life
-            this.maxLife = this.life;
-            this.decay = 0.9992; // Individual fading
+
+            // Proper fade-in/fade-out system
+            this.age = 0;
+            this.maxAge = 300 + Math.random() * 600; // Live for 5-15 seconds (300-900 frames at 60fps)
+            this.fadeInDuration = 120; // 120 frames to fade in (2 seconds)
+            this.fadeOutDuration = 120; // 120 frames to fade out (2 seconds)
+
             this.shadowType = Math.floor(Math.random() * 2); // Only 0 or 1 (no standing person)
             this.walkPhase = Math.random() * Math.PI * 2;
-            // Walking animation speed (keep this the same)
-            this.walkSpeed = 0.025 + Math.random() * 0.015;
+            // Walking animation speed (increased proportionately)
+            this.walkSpeed = 0.05 + Math.random() * 0.03;
             this.isWatching = false;
             this.watchDirection = 0;
-            this.fadeInPhase = parentSplit ? Math.PI : 0; // Splits fade in immediately
             this.hasSplit = parentSplit;
             this.splitCooldown = 0;
             this.lastSplitTime = 0;
@@ -68,30 +71,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
         update() {
             this.phase += this.frequency;
-            this.life *= this.decay;
             this.splitCooldown = Math.max(0, this.splitCooldown - 1);
 
-            // Fade-in effect for new figures
-            if (this.fadeInPhase < Math.PI) {
-                this.fadeInPhase += 0.05;
-            }
-
-            // Mouse interaction - stop and watch instead of swarming
+            // Mouse interaction - gravitate from wide range, stop very close
             const dx = mouseX - this.x;
             const dy = mouseY - this.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 150) { // Within watching range
-                this.isWatching = true;
-                this.watchDirection = Math.atan2(dy, dx);
-                // Stop moving when watching
-                this.vx *= 0.95;
-                this.vy *= 0.95;
+            if (distance < 200) { // Medium gravitational range
+                if (distance < 60) { // Very close stopping range
+                    this.isWatching = true;
+                    this.watchDirection = Math.atan2(dy, dx);
+                    // Stop completely when very close
+                    this.vx *= 0.85;
+                    this.vy *= 0.85;
+                } else {
+                    // Gravitate towards mouse when in range but not too close
+                    this.isWatching = false;
+                    const pullStrength = 0.002; // Gentle gravitational pull
+                    this.vx += (dx / distance) * pullStrength;
+                    this.vy += (dy / distance) * pullStrength;
+                }
             } else {
                 this.isWatching = false;
-                // Resume normal movement
+                // Resume normal movement when far away
                 this.vx = this.originalVx * 0.98 + this.vx * 0.02;
                 this.vy = this.originalVy * 0.98 + this.vy * 0.02;
+            }
+
+            // Only age when not watching the mouse (pause fading when standing around)
+            if (!this.isWatching) {
+                this.age++;
             }
 
             // Only update walk phase if not watching
@@ -100,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // More natural walking motion with head bob and subtle sway
-            const headBob = this.isWatching ? 0 : Math.sin(this.walkPhase * 2) * 0.15;
+            const headBob = this.isWatching ? 0 : Math.sin(this.walkPhase * 2) * 0.075;
             this.x += this.vx + (this.isWatching ? 0 : Math.sin(this.walkPhase) * 0.1);
             this.y += this.vy + headBob;
 
@@ -108,12 +118,13 @@ document.addEventListener('DOMContentLoaded', function() {
             this.vx *= 0.9995;
             this.vy *= 0.9995;
 
-            return this.life > 0.005; // Individual fade out
+            // Return false when figure should be removed (age-based)
+            return this.age < this.maxAge;
         }
 
         // Splitting mechanic
         split() {
-            if (this.splitCooldown > 0 || this.hasSplit || this.life < 0.3) return null;
+            if (this.splitCooldown > 0 || this.hasSplit || this.age < 100) return null;
 
             this.splitCooldown = 300 + Math.random() * 600; // 5-15 second cooldown
             this.hasSplit = true;
@@ -130,15 +141,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         render() {
-            const fadeIn = Math.sin(this.fadeInPhase) * 0.5 + 0.5;
-            const intensity = this.life * (Math.sin(this.phase) * 0.3 + 0.7) * fadeIn;
-            const baseAlpha = Math.max(0.3, intensity * 0.6); // Much more visible
-            const walkCycle = Math.sin(this.walkPhase);
+            // Calculate fade-in/fade-out based on age
+            let alpha = 1.0;
+
+            if (this.age < this.fadeInDuration) {
+                // Fade in over first fadeInDuration frames - start from 0
+                alpha = Math.max(0, this.age / this.fadeInDuration);
+            } else if (this.age > this.maxAge - this.fadeOutDuration) {
+                // Fade out over last fadeOutDuration frames - end at 0
+                const timeLeft = this.maxAge - this.age;
+                alpha = Math.max(0, timeLeft / this.fadeOutDuration);
+            }
+
+            // Add subtle ghostly flickering
+            const flicker = Math.sin(this.phase) * 0.1 + 0.9;
+            const baseAlpha = alpha * flicker * 0.7;
+
+            // Don't render if completely transparent
+            if (baseAlpha <= 0) return;
 
             ctx.save();
             ctx.translate(this.x, this.y);
 
-            // Create a more visible shadow
+            // Create a more visible shadow with age-based fading
             ctx.fillStyle = `rgba(60, 60, 60, ${baseAlpha})`;
 
             // Draw more realistic human silhouette
@@ -148,68 +173,67 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         drawHumanSilhouette() {
-            const scale = 0.8 + Math.sin(this.phase) * 0.1; // Subtle size variation
-            const leftLegSwing = Math.sin(this.walkPhase) * 4;
-            const rightLegSwing = Math.sin(this.walkPhase + Math.PI) * 4;
-            const leftArmSwing = Math.sin(this.walkPhase + Math.PI) * 2;
-            const rightArmSwing = Math.sin(this.walkPhase) * 2;
-            const headBob = Math.sin(this.walkPhase * 2) * 1;
+            // When watching, legs should be closed (no swing)
+            const leftLegSwing = this.isWatching ? 0 : Math.sin(this.walkPhase) * 2.7;
+            const rightLegSwing = this.isWatching ? 0 : Math.sin(this.walkPhase + Math.PI) * 2.7;
+            const leftArmSwing = this.isWatching ? 0 : Math.sin(this.walkPhase + Math.PI) * 1.3;
+            const rightArmSwing = this.isWatching ? 0 : Math.sin(this.walkPhase) * 1.3;
+            const headBob = this.isWatching ? 0 : Math.sin(this.walkPhase * 2) * 0.35;
 
             ctx.save();
-            ctx.scale(scale, scale);
 
-            // Head - rounded
+            // Head - rounded (scaled to 2/3)
             ctx.beginPath();
-            ctx.ellipse(0, -25 + headBob, 4, 5, 0, 0, Math.PI * 2);
+            ctx.ellipse(0, -17 + headBob, 2.7, 3.3, 0, 0, Math.PI * 2);
             ctx.fill();
 
-            // Neck
-            ctx.fillRect(-1, -20, 2, 3);
+            // Neck (scaled to 2/3)
+            ctx.fillRect(-0.7, -13, 1.3, 2);
 
-            // Torso - more realistic shape
+            // Torso - more realistic shape (scaled to 2/3)
             ctx.beginPath();
-            ctx.ellipse(0, -12, 5, 8, 0, 0, Math.PI * 2);
+            ctx.ellipse(0, -8, 3.3, 5.3, 0, 0, Math.PI * 2);
             ctx.fill();
 
-            // Arms
+            // Arms (scaled to 2/3)
             ctx.save();
-            ctx.translate(-4, -15);
+            ctx.translate(-2.7, -10);
             ctx.rotate(leftArmSwing * 0.1);
-            ctx.fillRect(-1, 0, 2, 12);
+            ctx.fillRect(-0.7, 0, 1.3, 8);
             ctx.restore();
 
             ctx.save();
-            ctx.translate(4, -15);
+            ctx.translate(2.7, -10);
             ctx.rotate(rightArmSwing * 0.1);
-            ctx.fillRect(-1, 0, 2, 12);
+            ctx.fillRect(-0.7, 0, 1.3, 8);
             ctx.restore();
 
-            // Legs - with knee joints
+            // Legs - with knee joints (scaled to 2/3)
             // Left leg
             ctx.save();
-            ctx.translate(-2, -4);
+            ctx.translate(-1.3, -2.7);
             ctx.rotate(leftLegSwing * 0.05);
-            ctx.fillRect(-1, 0, 2, 10); // Thigh
+            ctx.fillRect(-0.7, 0, 1.3, 6.7); // Thigh
             ctx.save();
-            ctx.translate(0, 10);
+            ctx.translate(0, 6.7);
             ctx.rotate(leftLegSwing * 0.08);
-            ctx.fillRect(-1, 0, 2, 12); // Shin
+            ctx.fillRect(-0.7, 0, 1.3, 8); // Shin
             // Foot
-            ctx.fillRect(-2, 12, 4, 2);
+            ctx.fillRect(-1.3, 8, 2.7, 1.3);
             ctx.restore();
             ctx.restore();
 
             // Right leg
             ctx.save();
-            ctx.translate(2, -4);
+            ctx.translate(1.3, -2.7);
             ctx.rotate(rightLegSwing * 0.05);
-            ctx.fillRect(-1, 0, 2, 10); // Thigh
+            ctx.fillRect(-0.7, 0, 1.3, 6.7); // Thigh
             ctx.save();
-            ctx.translate(0, 10);
+            ctx.translate(0, 6.7);
             ctx.rotate(rightLegSwing * 0.08);
-            ctx.fillRect(-1, 0, 2, 12); // Shin
+            ctx.fillRect(-0.7, 0, 1.3, 8); // Shin
             // Foot
-            ctx.fillRect(-2, 12, 4, 2);
+            ctx.fillRect(-1.3, 8, 2.7, 1.3);
             ctx.restore();
             ctx.restore();
 
@@ -218,28 +242,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function spawnParticles() {
-        if (particles.length < 65) { // 30% increase: 50 * 1.3 = 65
-            // Random spawn locations: top, sides, bottom
-            let spawnSide = Math.random();
-            let x, y;
-
-            if (spawnSide < 0.4) {
-                // Top edge
-                x = Math.random() * canvas.width;
-                y = -50;
-            } else if (spawnSide < 0.7) {
-                // Left edge
-                x = -50;
-                y = Math.random() * canvas.height;
-            } else if (spawnSide < 0.9) {
-                // Right edge
-                x = canvas.width + 50;
-                y = Math.random() * canvas.height;
-            } else {
-                // Bottom edge
-                x = Math.random() * canvas.width;
-                y = canvas.height + 50;
-            }
+        if (particles.length < 75) { // Increased total number for more presence
+            // Always spawn randomly across the screen for true fade-in effect
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
 
             particles.push(new ShadowPhoton(x, y));
         }
