@@ -3,20 +3,19 @@ layout: page2
 ---
 ## Academic Background
 
-- **Undergraduate degree:** Molecular Biology & Biotechnology Specialist Co-op, Neuroscience Major
- at the University of Toronto, Scarborough Campus
+- [Undergraduate degree](https://en.wikipedia.org/wiki/University_of_Toronto_Scarborough): Molecular Biology & Biotechnology Specialist Co-op, Neuroscience Major
 
 I went into undergrad with an emphasis on practicality, like genetic engineering. In the process, I developed an interest in the cognitive origins of the [collective dynamics of social groups](https://www.twitterandteargas.org/). 
 
-Really... it's networks all the way down, and all the way up.  
+I justify my switch with a simple revelation: it's networks all the way down, and all the way up.  
 
-I began my research career in [Elise Heon's](https://www.sickkids.ca/en/staff/h/elise-heon/) clinical genetics lab. I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
+I began my research career in [Elise Heon's](https://www.sickkids.ca/en/staff/h/elise-heon/) clinical genetics lab. I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the potential ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
 
-I briefly participated in data analysis on a [children's cochlear implant project](https://lab.research.sickkids.ca/archies-cochlear-implant/), visualizing how language shapes the brain, before joining [Julien Muffat's neuroimmunology lab](https://moleculargenetics.utoronto.ca/faculty/julien-muffat), where I learned about the complexity the brain holds, both in cell and interaction types—insight into why the brain is such a hard to model system.
+I briefly participated in data analysis on a [children's cochlear implant project](https://lab.research.sickkids.ca/archies-cochlear-implant/), visualizing how language shapes the brain, before joining [Julien Muffat's](https://moleculargenetics.utoronto.ca/faculty/julien-muffat) neuroimmunology lab, where I learned about the complexity the brain holds, both in cell and interaction types—insight into why the brain is such a hard to model system.
 
 I did my undergraduate thesis with [Yuliya Nikolova](https://www.camh.ca/en/science-and-research/science-and-research-staff-directory/yuliyanikolova) and learned how many layers of networks there are between genetics and complex social behaviour, another concept that captured my rapt attention. It's networks all the way up (and down!), which are deeply impacted by the many means of communication we engage in with others and ourselves.
 
-After graduating, I worked in [Martin Jonikas' lab](https://jonikaslab.squarespace.com/), following one of my deeply held beliefs— finding a means for our society to stabilize our presence on this planet.  I have deep respect for this work, but propaganda and its consequences [have a heavier bearing on my life](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine). 
+After graduating, I worked in [Martin Jonikas' lab](https://jonikaslab.squarespace.com/), following one of my deeply held beliefs— finding a means for our society to stabilize our presence on this planet.  I have deep respect for this work, but propaganda and its consequences [ultimately decides the scope of acceptable global action.](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine). 
 
 I just finished being the lab manager for [Robert Hawkin's](https://socialinteractionlab.github.io/) Social Interaction Lab, Where I studied how people converge on a shared underlying belief in a social network. I'm now a graduate student with [Tim Pleskac](https://www.timpleskac.com) at Indiana!
 

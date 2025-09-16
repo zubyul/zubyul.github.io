@@ -12,7 +12,7 @@ layout: homepage
 - Blood on the clocktower as an experiment! Adversarial emotional communication. What's a vibe?
 - Schemas and emotion-cuing in social memory formation. People are strange when you're a stranger.
 - Neuronal network level models of memory formation, neural oscillation/criticality, and belief updating in different emotional states. A cortical column is just doing math. 
-- AI welfare and the application of human memory efficiencies to AI. 
+- Application of human memory efficiencies to AI; what may be called AI socialization/welfare (look at the sun)
 - Information cascades across all network scales. 
 - Human personality manifold and how we cue identity, online and offline. I'm coded...
 

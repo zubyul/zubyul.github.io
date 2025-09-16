@@ -190,8 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.save();
             ctx.translate(this.x, this.y);
 
-            // Create a darker lime green shadow with age-based fading (75% opacity)
-            ctx.fillStyle = `rgba(140, 173, 74, ${baseAlpha * 0.65})`;
+            // Create a lighter header shadow with age-based fading (75% opacity)
+            ctx.fillStyle = `rgba(20, 25, 12, ${baseAlpha * 0.60})`;
 
             // Draw more realistic human silhouette
             this.drawHumanSilhouette();
