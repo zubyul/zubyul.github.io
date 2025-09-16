@@ -8,9 +8,7 @@ layout: page2
 
 I went into undergrad with an emphasis on practicality, like genetic engineering. In the process, I developed an interest in the cognitive origins of the [collective dynamics of social groups](https://www.twitterandteargas.org/). 
 
-I rationalize this shift in two ways.
-- Firstly, it's all dynamic networks.  
-- Secondly, an itch to understand culture and ideology, easily witnessed on the internet as everything from shared language to culture defining ideological debate, but difficult to define on the level of the brain. While I have switched to Cognitive Science to pursue this, I aim to reconnect with Neuroscience along the way!
+Really... it's networks all the way down, and all the way up.  
 
 I began my research career in [Elise Heon's](https://www.sickkids.ca/en/staff/h/elise-heon/) clinical genetics lab. I learned about the complexity of epigenetic modification here, and am still [deeply fascinated by](https://www.nature.com/articles/s41588-019-0494-8) [the ramifications](https://www.bitsofwonder.co/p/a-revolution-in-biology).
 

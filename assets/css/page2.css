@@ -1,6 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
+@keyframes aurora-move {
+  0% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+  25% {
+    transform: translateX(10%) translateY(5%);
+  }
+  50% {
+    transform: translateX(-5%) translateY(10%);
+  }
+  75% {
+    transform: translateX(5%) translateY(-5%);
+  }
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
+
+@keyframes aurora-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
 body {
   background-color: rgb(35, 41, 21);
   padding: 0px;
@@ -10,6 +37,54 @@ body {
   margin: 0;
   overflow-x: hidden;
   word-wrap: break-word;
+  position: relative;
+}
+
+#gentleAurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2c1810 0%, #1a1a2e 100%);
+}
+
+.aurora-shape {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.7;
+  border-radius: 50%;
+  animation: aurora-move 15s infinite ease-in-out, aurora-pulse 8s infinite ease-in-out;
+}
+
+.aurora-one {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, #ff9a8b, #ffd3a5);
+  top: -200px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.aurora-two {
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+  bottom: -150px;
+  left: -50px;
+  animation-delay: -5s;
+}
+
+.aurora-three {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(45deg, #ddd6f3, #faaca8);
+  bottom: -100px;
+  right: -120px;
+  animation-delay: -10s;
 }
 
 @media (min-width: 901px) {
